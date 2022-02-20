@@ -23,36 +23,33 @@ async def start_set(_, query: CallbackQuery):
     BOT_NAME = me_bot.first_name
     await query.answer("home start")
     await query.edit_message_text(
-        f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Is a bot to play music and video in groups, through the Telegram Group video chat!**
+        f"""**I can stream music × video very smoothly from YouTube in your group's voice chat. 
 
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+Find out all the Bot's commands and how they work by clicking on the commands button.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
+                        "➕ Click here to add me ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")],
+            
                 [
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("❤ Donate", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("Commands❓", callback_data="command_list"),
+               
                 ],
                 [
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "🛠 Support", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "Updates❕", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
+                        "💲 Owner", url="https://t.me/Its_romeoo"
                     )
                 ],
             ]
@@ -127,12 +124,12 @@ All commands can be used with (`! / .`) handler""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👮🏻‍♀️ Admins Commands", callback_data="admin_command"),
+                    InlineKeyboardButton("Admin CMDS", callback_data="admin_command"),
                 ],[
-                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                    InlineKeyboardButton("Users CMDS", callback_data="user_command"),
                 ],[
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("Sudo CMDS", callback_data="sudo_command"),
+                    InlineKeyboardButton("Romeo's CMDS", callback_data="owner_command"),
                 ],[
                     InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
                 ],
